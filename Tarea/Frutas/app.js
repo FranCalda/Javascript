@@ -11,6 +11,17 @@ const frutas = [
 ];
 
 //2
-
+let ul = document.getElementById("botones");
+let fragmento = document.createDocumentFragment();
+frutas.forEach(fruta => {
+    let li = document.createElement("li");
+    let boton = document.createElement("button");
+    boton.textContent = fruta.icono + " " + fruta.nombre;
+    boton.addEventListener("click", agregarFruta);
+    li.appendChild(boton);
+    fragmento.appendChild(li);
+});
+ul.appendChild(fragmento);
 
 //3
+document.getElementById("btnDestruir").addEventListener("click", quitarComportamientos);
