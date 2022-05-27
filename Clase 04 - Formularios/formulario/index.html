@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrando usuario</title>
+    <style>
+        form { border: 2px dotted orangered; padding: 20px;}
+        label {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul id="errores"></ul>
+    <form name="registro" action="procesar.php" method="get" >
+        <label>
+            Email
+            <input type="text" name="correo">
+        </label>
+        <label>
+            Clave   
+            <input type="text" name="clave">
+        </label>
+
+        <button>Guardar</button>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
+
+<!--
+    El unico que puede mandar los datos es el form
+
+    1) Un usuario llena el formulario, y luego pulsa el  button
+    2) El button le avisa al <form> que el usuario quiere mandar los datos
+    3) Form envia el form:
+        3.1)El form busca todos los controles que dispongan el atributo name. Ej: el input correo y el input clave 
+        3.2)Genera el queryString con los valores cargados de los  obtenidos del punto anterior . Ej: correo=juan&clave=123 
+        3.3)Envia el queryString al archivo backend que dice el action
+
+        Si method es get, la peticion
+        -----------------------------
+        GET procesar.php? correo=juan&clave=123 HTTP/1.1
+        accept text/html
+        -----------------------------
+
+        Si el method es post, la peticion
+        -----------------------------
+        POST procesar.php HTTP/1.1 // Linea de request
+        accept text/html          // Linea de encabezado
+                                  // Linea en blanco
+        correo=juan&clave=123     // Body del request
+  
+        www.regex101.com
+        www.regexr.com
+-->

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+    <style>
+        label {
+            display: block;
+            padding: 16px;
+        }
+        label>span{
+            color: darkred;
+            background: lightpink;
+            padding: 6px;
+            border-radius: 3px;
+        }
+        .oculto{
+            display: none;
+        }
+        .con-error{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registro</h1>
+    <form name="registro" action="/procesar.php" method="GET">
+        <label>
+            Nombre
+            <input name="nombre">
+            <span>El nombre debe contener solo letras y espacio. </span>
+        </label>
+
+        <label>
+            Email
+            <input name="email">
+            <span>El email debe tener un formato valido.</span>
+        </label>
+
+        <label>
+            Pais
+            <select name="pais">
+                <option value="ninguno">Seleccionar</option>
+            </select>
+            <span>Debes seleccionar un país</span>
+        </label>
+
+        <label>
+            <input type="checkbox" name="terminos">
+            Aceptar <a href="#">Términos y condiciones</a>
+            <span>Debes aceptar los terminos para registrarse.</span>
+        </label>
+
+        <button>Registrarse!</button>
+    </form>
+
+    <script src="validaciones.js"></script>
+</body>
+</html>
+
+<!-- 
+    Escribir las funciones:
+    -validarNombre(cadenaNombre) responde boolean
+    -validarEmail (cadenaEmail) responde boolean
+    -validarSelector(valorSeleccionado) responde boolean
+    -validarCheck(nodoCheck) responde boolean
+    Utiliza expresiones regulares si lo deseas en el html
+
+    agrega a cada span la clase oculto
+
+    Luego un script app.js que debe:
+    -generar las opciones del selector con el siguiente array:
+    const paises  = [{ value: "ar", text: "Argentina"}, {value: "br", text : "Brasil"}, {value: "ch", text: "Chile"}];
+    -para cada control, validar el dato ingresado / seleccionado por el usuario, al perder el foco.
+    -las validaciones anteriores deben utilizar "validaciones.js" para determinar si el campo esta correcto, en caso de error
+    mostrar el span asociado con el mensaje, y colocar la clase "con-error" al input. (nota: en los checkbox quizas la clase no
+    se muestre pero se agrega)
+    -validar el formulario completo antes de ser enviado.
+    Se puede decir que si un elemento del formulario tiene la clase "con-error", entonces no hay que enviar el form.
+    Ten en cuenta que alguien podria pulsar el boton de envio sin llenar  nada  (sin producir blur)
+ -->
