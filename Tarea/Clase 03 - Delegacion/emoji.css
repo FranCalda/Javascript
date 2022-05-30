@@ -1,0 +1,16 @@
+.emoji-bar{
+    display:flex;
+    list-style:none;
+    margin:3px;
+    padding:3px;
+    border-radius:6px;
+    background:#eee;
+}
+
+.emoji-bar li{
+    padding:4px;
+}
+
+.oculto{
+    display:none;
+}

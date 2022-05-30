@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2</title>
+  <link rel="stylesheet" href="emoji.css">
+  <style>
+    .visor{
+      display: flex;
+    }
+    nav{
+      background: cyan;
+      padding: 10px;
+      overflow: hidden auto;
+      display: flex;
+      flex-direction: column;
+      max-height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejercicio 2</h1>
+  <div class="visor">
+    <nav>
+      <a href="https://wikipedia.org">🌎 Wikipedia</a>
+    </nav>
+    <iframe src="" frameborder="1" width="300"></iframe>
+  </div>
+  
+  <hr>
+
+  <h2>Agregar enlaces</h2>
+  <form>
+    <label>Enlace <input type="url" name="enlace"></label>
+    <label>Nombre <input type="text" name="nombre"></label>
+    
+    <label class="emoji-control">
+      Emoji
+      <input type="text" name="emoji">
+      <button type="button">🙂</button>
+    </label>
+    <ul class="emoji-bar oculto">
+      <li>🙂</li>
+      <li>😍</li>
+      <li>😱</li>
+      <li>🙋🏻</li>
+    </ul>
+    
+    <button>Agregar</button>
+  </form>
+
+  <script src="emoji.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+<!--
+  Hacer funcionar el visor (como hicimos en clase)
+  Capturar el submit del formulario, evitar que redireccione al action y leer los inputs para:
+  - crear un enlace <a>
+  - Agregarle el href según el input enlace
+  - Agregarle como contenido el emoji y el input nombre separados por un espacio
+  - Agregar el enlace nuevo en el nav del visor
+  - Agregar el script necesario para que funcione la barra de emojis
+-->

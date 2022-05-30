@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="emoji.css">
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+
+    <label class="emoji-control">
+        Emoji
+        <input type="text" name="emoji">
+        <button type="button">😀</button>
+    </label>
+
+    <ul class="emoji-bar oculto">
+        <li>😀</li>
+        <li>😋</li>
+        <li>😂</li>
+        <li>🤠</li>
+    </ul>
+    
+    <script src="emoji.js"></script>
+</body>
+</html>
+
+<!--Éste podria ser un control nuevo para formularios!
+se trata de un simple input,pero a su lado tenemos un botón que nos permite insertar emojis en él.
+Cuando pulsamos el botón,nos aparece/desaparece una barra de iconos para seleccionar emojis.
+Cada vez que pulsemos un <li>,su emoji será el contenido del input.
+El input emoji solo deberá contener un emoji seleccionado.
+Los emojis realmente son texto,pero en los sistemas operativos modernos,hoy son representados como imágenes
+-Capturar los nodos:
+- emojiControl
+- emojiInput
+- emojiBoton
+- emojiBar
+-Crear las funciones:
+emoji_toggleBar():que permita abrir o cerrar la barra o listado de emojis
+emoji_clickEmoji():que copie el emoji en el input
+-Asignar comportamientosyutilizar delegación de eventos si es conveniente.
+-Eliminar la etiqueta styleyreemplazarla con un archivo css con el mismo contenido
+Puedes agregar nuevos<li>con la combinación:
+MacOS:cmd+ctrl+space
+Windows 10:window+ -->
