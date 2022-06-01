@@ -1,0 +1,24 @@
+Luego de section.innerHTML=ajax.response;
+Podemos decir que el html obtenido por ajax,ya es parte del DOM.
+Por esa razón,si nos paramos en la varible section,podriamos utilizar
+el método querySelector/querySelectorAll para capturar elementos hijos
+Podemos notar que al utilizar innerHTML,todos los nodos serán creados,
+pero,los nodos script no peticionarán su archivoypor lo tanto no ejecutarán su código
+Si construyes un script con createElementyluego lo agregas al DOM,
+adiferencia de innerHTML,appendChild si ejecuta el código de los scripts.
+Ejercicio1::::
+Debes crear una función que reviva los scripts.
+Será llamada luego de innerHTMLyse le pasará como parametro un array de nodos scripts.
+La función debe devolver un fragmento que contenga la misma cantidad de scripts,pero reconstruidos.
+Nota:Si estas un poco perdido al final de éste archivo dejo la solución(procedimiento).
+Ejercicio2
+Cada vez que obtenemos una respuesta ajax deberiamos almacenarla para evitar realizarla si se vuelvea
+solicitar.
+Para hacer esto sería util disponer de un objeto(llamemos lo cache).
+Cada propiedad del cache puede coincidir con las rutas de la spa.Entonces al solicitar el contenido de
+una ruta,
+esta podria ser almacenada en el objeto cache.
+De esta forma,antes de realizar el ajax,podriamos consultar si existe la propiedad en el cache
+pertenecienteala ruta que se vaasolicitar por ajax.
+Si la ruta existiera en el cacheytiene un contenido guardado,podemos usar este contenido para setear
+el innerHTML del sectionyevitar el ajax.

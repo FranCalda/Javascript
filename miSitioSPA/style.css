@@ -1,5 +1,10 @@
 #modulo {
-    width: 100vw;
+    width: calc(100vw-20px);
     min-height: 300px;
     border: 2px dotted red;
+    padding: 10px;
+}
+
+nav a {
+    margin: 6px;
 }
